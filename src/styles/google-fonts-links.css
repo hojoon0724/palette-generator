@@ -1,0 +1,102 @@
+/* @import url('https://fonts.googleapis.com/css2? */
+
+/* family=
+  Roboto+Flex:
+  opsz,slnt,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@
+  8..144,-10..0,25..151,100..1000,-200..150,27..175,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760& */
+/* family=
+  Roboto+Flex:
+    opsz,slnt,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTLC@
+    8..144,-10..0,25..151,100..1000,-200..150,27..175,323..603,25..135,416..570& */
+
+.roboto-flex-uniquifier {
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+}
+
+/* family=
+  IBM+Plex+Sans:
+    ital,wdth,wght@
+    0,75..100,100..700;1,75..100,100..700& */
+.ibm-plex-sans-uniquifier {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" <width>;
+}
+
+/* family=
+  IBM+Plex+Mono:
+    ital,wght@
+    0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700& */
+.ibm-plex-mono-uniquifier {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* family=
+  IBM+Plex+Sans+Condensed:
+    ital,wght@
+    0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700& */
+.ibm-plex-sans-condensed-uniquifier {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* family=
+  IBM+Plex+Serif:
+    ital,wght@
+    0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700& */
+.ibm-plex-serif-uniquifier {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* family=
+  Recursive:
+    slnt,wght,CASL,CRSV,MONO@
+    -15..0,300..1000,0..1,0..1,0..1& */
+.recursive-uniquifier {
+  font-family: "Recursive", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" <slant>,
+    "CASL" <casual>,
+    "CRSV" <cursive>,
+    "MONO" <monospace>;
+}
+  
+/* family=
+  Tektur:
+    wdth,wght@
+    75..100,400..90& */
+.tektur-uniquifier {
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" <width>;
+}
+/* display=swap'); */
