@@ -6,6 +6,9 @@ type HSL = { h: number; s: number; l: number; a?: number };
 
 // Parse strings like: hsl(210, 50%, 40%) or hsla(210, 50%, 40%, 0.8)
 function parseHsl(input: string): HSL {
+  if (!input || typeof input !== "string") {
+    throw new Error(`Invalid input: expected a string, got ${typeof input}`);
+  }
   const re =
     /hsla?\(\s*([+-]?\d*\.?\d+)\s*(?:deg)?\s*,\s*([+-]?\d*\.?\d+)%?\s*,\s*([+-]?\d*\.?\d+)%?(?:\s*,\s*([+-]?\d*\.?\d+))?\s*\)/i;
   const m = input.match(re);
@@ -95,6 +98,9 @@ export function contrastRatioFromLuminance(L1: number, L2: number): number {
 }
 
 export function contrastRatioFromHsl(bgColor: string, textColor: string): number {
+  if (!bgColor || !textColor) {
+    throw new Error(`Invalid colors: bgColor="${bgColor}", textColor="${textColor}"`);
+  }
   const bg = parseHsl(bgColor);
   const fg = parseHsl(textColor);
   const bgRgb = hslToRgb(bg.h, bg.s, bg.l);
@@ -105,9 +111,9 @@ export function contrastRatioFromHsl(bgColor: string, textColor: string): number
 }
 
 // Backwards-compatible API (AA for normal text: >= 4.5)
-export function ColorContrastCheck(bgColor: string, textColor: string): {ratio: number; isAccessible: boolean} {
+export function ColorContrastCheck(bgColor: string, textColor: string): { ratio: number; isAccessible: boolean } {
   const ratio = contrastRatioFromHsl(bgColor, textColor);
-  return {ratio: ratio, isAccessible: ratio >= 4.5};
+  return { ratio: ratio, isAccessible: ratio >= 4.5 };
 }
 
 // Optional: helper for other thresholds
